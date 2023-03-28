@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root {
+    --Body-Font:   'Open Sans', sans-serif;
+    --Headings-Font: 'Poppins', sans-serif;
+    --white:         hsl(0, 0%, 100%);
+    --Violet:        hsl(257, 40%, 49%);
+    --Soft-Magenta:   hsl(300, 69%, 71%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--BodyFont);
+    color: var(--white);
+    background: var(--Violet) url(images/bg-mobile.svg) no-repeat 50% top;   
+}
+
+main {
+    width: 375px;    
+    margin: 0 auto 40px;    
+}
+
+.header {
+    padding: 40px 40px 70px;
+}
+
+.logo {    
+    width: 140px;
+    margin-bottom: 65px;
+    padding-left: 0;
+}
+
+.mockup {
+    display: block;    
+    width: 100%;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 0 35px 10px;
+}
+
+.title {    
+    font: 700 1.5em var(--Headings-Font);    
+    text-align: center;
+    margin-bottom: 18px;
+}
+.description {
+    margin-bottom: 20px;
+    font: 500 1em var(--Body-Font);
+    text-align: center;    
+    line-height: 23px;
+}
+
+.button {    
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.button a{
+    display: inline-block;
+    width: 65%;
+    height: 42px;    
+    padding-top: 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    color: var(--Violet);
+    background-color: var(--white);    
+    text-decoration: none;
+}
+
+.button a:hover{
+    background-color: var(--Soft-Magenta);
+    color: var(--white);
+}
+
+ul {
+    display: flex;  
+    justify-content: space-between;    
+    align-items: center;
+    width: 110px;
+    margin: 0 auto;
+}
+
+li {
+    list-style: none;
+}
+
+.icons a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;   
+    padding-top: 6px;
+    font-size: 15px;    
+    text-decoration: none;
+    color: var(--white);
+    border-radius: 50%;
+    border: 2px solid var(--white);
+}
+
+.icons a:hover {
+    border-color: var(--Soft-Magenta);
+    color: var(--Soft-Magenta);
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(0, 0%, 0%);
+}
+
+/* VIEWPORTS */
+@media only screen and (min-width: 1284px){
+    body {
+        background-image: url(images/bg-desktop.svg);
+        background-position-x: -10px;        
+    }
+
+    main {
+        margin: -20px auto 0;
+        width: 1284px;        
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .header {
+        width: 753px;              
+    } 
+
+    .mockup {
+        width: 700px;    
+        height: 510px;    
+    }
+    
+    .content {
+        height: 700px;        
+    }
+
+    .title {        
+        margin-top: 185px;
+        padding-right: 90px;
+        font-size: 1.95em;
+        text-align: left;
+    }
+
+    .description {     
+        padding-right: 17px;
+        font-size: 0.95em;
+        text-align: left;      
+    }
+
+    .button {
+        text-align: left;
+        margin-bottom: 250px;
+    }
+
+    .button a{
+        width: 200px;
+        height: 50px;
+        padding-top: 14px;
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .social {      
+        text-align: right;               
+    }
+
+    .icons {
+        width: 150px;               
+    }
+    .icons a{        
+        width: 36px;
+        height: 36px;
+        font-size: 20px;                      
+    }    
+
+    .fa-facebook-f {
+        padding: 10px;        
+    }
+
+    .fa-twitter {
+        padding: 5px;
+    }
+
+    .fa-instagram {
+        padding: 7px;
+    }
+}
